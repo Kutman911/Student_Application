@@ -30,4 +30,14 @@ public class StudentController {
     public Student findByEmail(@PathVariable String email) {
         return studentService.findByEmail(email);
     }
+
+    @PutMapping("update_student")
+    public Student updateStudent(Student student) {
+        return studentService.updateStudent(student);
+    }
+
+    @DeleteMapping("delete_student/{email}")
+    public void deleteStudent(@PathVariable String email) {
+        studentService.deleteStudent(email);
+    }
 }
